@@ -1,0 +1,17 @@
+
+
+<form action="/register/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <p><label for="first_name">First name: </label></p>
+<input id="first_name" type="text" name="first_name" maxlength="100" required>
+    <p><label for="last_name">Last name: </label></p>
+<input id="last_name" type="text" name="lasr-name" maxlength="100" required>
+    <p><label for="email">Email: </label></p>
+<input id="email" type="text" name="email" maxlength="100" required>
+    <p><label for="password">Password: </label></p>
+<input id="password" type="boolean" name="your_name" maxlength="100" required>
+    <p><label for="c_password">Confirm Password: </label></p>
+    <input type="submit" value="Submit">
+    </form>
+    

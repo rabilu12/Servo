@@ -74,14 +74,22 @@ WSGI_APPLICATION = 'SERVO.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+POSTGRES_DB = os.environ.get("  POSTGRES_DB")
+POSTGRES_PASSWORD = os.environ.get("  POSTGRES_PASSWORD")
+POSTGRES_USER = os.environ.get("  POSTGRES_USER")
+POSTGRES_HOST = os.environ.get("  POSTGRES_HOST")
+POSTGRES_PORT = os.environ.get("  POSTGRES_PORT")
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'servo',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': ''
+        'ENGINE': 'django.db.backends.postgresql_psycopgy2',
+        'NAME': POSTGRES_DB,
+        'HOST': POSTGRES_HOST,
+        'USER': POSTGRES_USER,
+        'PASSWORD': POSTGRES_PASSWORD,
+        'PORT': POSTGRES_PORT,
+        
+
     }
 }
 
